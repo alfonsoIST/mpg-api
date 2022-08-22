@@ -3,12 +3,39 @@
 
 Samples API for IST MPG.
 
-- Endpoint to generate access Token:
+### Endpoint to generate access Token:
 ```bash
 curl -X POST "https://<host>:<port>/api/token/refreshToken" -H "accept: application/json;charset=UTF-8" -H "Content-Type: application/json;charset=UTF-8" -d "{ \"password\": \"your_password\", \"username\": \"your_username\"}" -k
 ```
 
-- Endpoint to list available documents, where PID is the Patient ID:
+<details>
+<summary>Sample response</summary>
+
+<code style="white-space:nowrap;">
+
+```json
+{
+  "status": 200,
+  "statusMessage": "Token generated correctly",
+  "success": true,
+  "timestamp": "01/01/2021 11:11:11 AM +0200",
+  "results": [
+    {
+      "token": "token_string",
+      "user": "your_username",
+      "token_expire_time": "nn"
+    }
+  ]
+}
+```
+
+</code>
+
+</details>
+
+
+
+### Endpoint to list available documents, where PID is the Patient ID:
 ```bash
 curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
 ```
@@ -67,7 +94,7 @@ curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: app
 
 </details>
 
-- Endpoint to download document, given the Document ID (DOCID):
+### Endpoint to download document, given the Document ID (DOCID):
 ```bash
 curl -X GET "https://<host>:<port>/api/documents/download/<DOCID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
 ```
