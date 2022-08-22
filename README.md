@@ -3,6 +3,8 @@
 
 Samples API for IST MPG.
 
+## Curl Samples
+
 ### Endpoint to generate access Token:
 ```bash
 curl -X POST "https://<host>:<port>/api/token/refreshToken" -H "accept: application/json;charset=UTF-8" -H "Content-Type: application/json;charset=UTF-8" -d "{ \"password\": \"your_password\", \"username\": \"your_username\"}" -k
@@ -130,6 +132,13 @@ curl -X GET "https://<host>:<port>/api/documents/download/<DOCID>" -H "accept: a
 </code>
 
 </details>
+
+
+## Python Sample Files
+
+- list_books.py
+- download_books.py
+- upload_report.py
 
 # License
 
