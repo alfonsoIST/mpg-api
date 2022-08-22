@@ -15,9 +15,9 @@ curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: app
 
 <details>
 <summary>Sample response</summary>
-```
+<code style="white-space:nowrap;">
 curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
-```
+</code>
 </details>
 
 Sample response:
