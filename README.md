@@ -13,6 +13,13 @@ curl -X POST "https://<host>:<port>/api/token/refreshToken" -H "accept: applicat
 curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
 ```
 
+<details>
+<summary>Sample response</summary>
+```
+curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
+```
+</details>
+
 Sample response:
 ```json
 {
