@@ -71,7 +71,12 @@ curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: app
 ```bash
 curl -X GET "https://<host>:<port>/api/documents/download/<DOCID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
 ```
-Sample response:
+
+<details>
+<summary>Sample response</summary>
+
+<code style="white-space:nowrap;">
+
 ```json
 {
   "status": 200,
@@ -94,6 +99,10 @@ Sample response:
   ]
 }
 ```
+
+</code>
+
+</details>
 
 # License
 
