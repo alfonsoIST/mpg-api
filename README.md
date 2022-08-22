@@ -138,7 +138,9 @@ curl -X GET "https://<host>:<port>/api/documents/download/<DOCID>" -H "accept: a
 
 - list_books.py
 - download_books.py
-- [upload_report.py](ttps://github.com/alfonsoIST/mpg-api/blob/master/python_samples/download_books.py)
+- [list_books.py](ttps://github.com/alfonsoIST/mpg-api/blob/master/python_samples/list_books.py)
+- [download_books.py](ttps://github.com/alfonsoIST/mpg-api/blob/master/python_samples/download_books.py)
+- [upload_report.py](ttps://github.com/alfonsoIST/mpg-api/blob/master/python_samples/upload_report.py)
 
 # License
 
