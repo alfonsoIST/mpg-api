@@ -99,9 +99,9 @@ curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: app
 
 </details>
 
-### Endpoint to download document, given the Document ID (DOCID):
+### Endpoint to download document, given the Document ID (IDDOC):
 ```bash
-curl -X GET "https://<host>:<port>/api/documents/download/<DOCID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
+curl -X GET "https://<host>:<port>/api/documents/download/<IDDOC>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
 ```
 
 <details>
