@@ -18,17 +18,6 @@ curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: app
 
 <code style="white-space:nowrap;">
 
-```bash
-
-curl -X GET "https://<host>:<port>/api/documents/list?PID=<PID>" -H "accept: application/json;charset=UTF-8" -H "Authorization: Bearer <token>" -k
-
-```
-
-</code>
-
-</details>
-
-Sample response:
 ```json
 {
   "status": 200,
@@ -74,6 +63,9 @@ Sample response:
 }
 ```
 
+</code>
+
+</details>
 
 - Endpoint to download document, given the Document ID (DOCID):
 ```bash
