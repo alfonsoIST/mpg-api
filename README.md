@@ -143,6 +143,12 @@ curl -X GET "https://<host>:<port>/api/documents/download/<IDDOC>" -H "accept: a
 - [download_books.py](https://github.com/alfonsoIST/mpg-api/blob/master/python_samples/download_books.py)
 - [upload_report.py](https://github.com/alfonsoIST/mpg-api/blob/master/python_samples/upload_report.py)
 
+## PHP Sample Files
+
+- [list_books.php](https://github.com/alfonsoIST/mpg-api/blob/master/php_samples/list_books.php)
+- [download_books.php](https://github.com/alfonsoIST/mpg-api/blob/master/php_samples/download_books.php)
+- [upload_report.php](https://github.com/alfonsoIST/mpg-api/blob/master/php_samples/upload_report.php)
+
 # License
 
 These sample project files are licensed under either of
