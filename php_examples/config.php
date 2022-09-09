@@ -55,9 +55,8 @@ function httpPost($url, $data)
         $header = substr($response, 0, $header_size);
         $body = substr($response, $header_size);
         $curlResponse=json_decode($body);
-        $token = $curlResponse->results[0]->token;
         curl_close($curl);
-        return $token;
+        return $curlResponse;
     }
     catch (Exception $e) {
         echo("ERROR: " . $e->__toString());
