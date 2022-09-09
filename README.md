@@ -1,8 +1,8 @@
 # IST-MPG REST API Samples
 
-Version 1.3
+Version 1.4
 
-Fri Sep  9 09:32:35 CEST 2022
+Fri Sep  9 11:33:40 CEST 2022
 
 
 Samples API for IST MPG. For additional information please contact support AT istmedical.com
