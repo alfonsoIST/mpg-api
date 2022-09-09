@@ -11,6 +11,7 @@ define('USERNAME',  'my_username');
 
 function httpGet($url, $token)
 {
+    try {
         $headers = [
             "Accept: application/json;charset=UTF-8",
             "Authorization: Bearer ". $token
@@ -24,8 +25,16 @@ function httpGet($url, $token)
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         $response = curl_exec($curl);
+        $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
         curl_close($curl);
-        var_dump($response);
+        $header = substr($response, 0, $header_size);
+        $body = substr($response, $header_size);
+        $curlResponse=json_decode($body);
+        return $curlResponse;
+    }
+    catch (Exception $e) {
+        echo("ERROR: " . $e->__toString());
+    }
 }
 
 function httpPost($url, $data)
@@ -67,7 +76,8 @@ function getToken()
     $data->username = USERNAME;
     $data->password = PASSWORD;
     $data = json_encode($data);
-    $token = httpPost(getUrl('token/refreshToken'), $data);
+    $curlResponse = httpPost(getUrl('token/refreshToken'), $data);
+    $token = $curlResponse->results[0]->token;
     return $token;
 }
 ?>
