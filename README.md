@@ -1,11 +1,36 @@
-# IST-MPG REST API Samples
-
-Version 1.4
-
-Fri Sep  9 11:33:40 CEST 2022
-
+-----------------------
+## IST-MPG **REST API** Samples<br>
+###### [[Change Log]](#changes) [[Samples]](#samples)
+-----------------------
 
 Samples API for IST MPG. For additional information please contact support AT istmedical.com
+Latest Version: 1.5
+
+<a name="changes"></a>
+### Change Log
+
+-----------------------
+#### Version 1.5
+lun 20 feb 2023 09:05:02 CET
+
+* Updated file php_examples/upload_report.php
+* Changes in php_examples/config.php to incluide upload report functionality
+
+-----------------------
+#### Version 1.4
+Fri Sep  9 11:33:40 CEST 2022
+* Python and PHP samples added
+
+-----------------------
+#### Version 1.3
+Wed Sep  8 10:13:15 CEST 2021
+* Curl samples added
+* Moved repository to Github and made public
+
+<a name="samples"></a>
+
+### Code Samples
+
 
 ## Curl Samples
 

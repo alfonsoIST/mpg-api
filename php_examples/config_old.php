@@ -41,16 +41,22 @@ function httpPost($url, $data)
 {
     try {
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_HTTPHEADER,$data->headers);
+        curl_setopt($curl, CURLOPT_HEADER, 1);
+        curl_setopt($curl, CURLOPT_HTTPHEADER,["Content-Type: application/json", "Accept: application/json;charset=UTF-8"]);
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $data->postFields);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         $response = curl_exec($curl);
+        $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
+        $header = substr($response, 0, $header_size);
+        $body = substr($response, $header_size);
+        $curlResponse=json_decode($body);
         curl_close($curl);
-        return json_decode($response);
+        return $curlResponse;
     }
     catch (Exception $e) {
         echo("ERROR: " . $e->__toString());
@@ -64,19 +70,13 @@ function getUrl($endPoint)
 
 function getToken()
 {
-    $headers = [
-        "Content-Type: application/json",
-        "Accept: application/json;charset=UTF-8"
-    ];
-    $jsonData = [
-        'username' => USERNAME,
-        'password' => PASSWORD
-    ];
+    // $data = array('username' => USERNAME, 'password' => PASSWORD);
     $data = new stdClass();
-    $data->headers = $headers;
-    $data->postFields = json_encode((object)$jsonData);
-
+    $data->username = USERNAME;
+    $data->password = PASSWORD;
+    $data = json_encode($data);
     $curlResponse = httpPost(getUrl('token/refreshToken'), $data);
-    return $curlResponse->results[0]->token;
+    $token = $curlResponse->results[0]->token;
+    return $token;
 }
 ?>
