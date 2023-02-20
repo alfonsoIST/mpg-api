@@ -1,5 +1,5 @@
 -----------------------
-## IST-MPG **REST API** Samples<br>
+# IST-MPG **REST API** Samples<br>
 ###### [[Change Log]](#changes) [[Samples]](#samples)
 -----------------------
 
@@ -7,7 +7,7 @@ Samples API for IST MPG. For additional information please contact support AT is
 Latest Version: 1.5
 
 <a name="changes"></a>
-### Change Log
+# Change Log
 
 -----------------------
 #### Version 1.5
@@ -29,7 +29,7 @@ Wed Sep  8 10:13:15 CEST 2021
 
 <a name="samples"></a>
 
-### Code Samples
+# Code Samples
 
 
 ## Curl Samples
